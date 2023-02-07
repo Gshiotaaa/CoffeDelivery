@@ -1,5 +1,6 @@
 import coffeImage from "../assets/coffe.png";
 import { AdvantagePoints, AdvantagePointsProps } from "./AdvantagePoints";
+import { Coffes } from "./Coffes";
 import { Header } from "./Header";
 
 const advantages: AdvantagePointsProps[] = [
@@ -57,6 +58,8 @@ export function Home() {
           <img src={coffeImage} alt="" />
         </div>
       </div>
+      <h1 className="px-40 text-3xl font-header">Nossos cafés</h1>
+      <Coffes />
     </div>
   );
 }

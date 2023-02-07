@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./components/Home";
 import { ShoppingCart } from "./components/ShoppingCart";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 const router = createBrowserRouter([
   {
@@ -14,5 +15,9 @@ const router = createBrowserRouter([
 ]);
 
 export function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ShoppingCartProvider>
+      <RouterProvider router={router} />
+    </ShoppingCartProvider>
+  );
 }
