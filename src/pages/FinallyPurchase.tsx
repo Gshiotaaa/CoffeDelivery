@@ -16,7 +16,7 @@ export function FinnalyPurchase() {
       : 0;
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 max-md:w-4/5 ">
       <div className="flex justify-between text-base-text">
         <span>Total de entradas</span>
         <span>
@@ -39,10 +39,11 @@ export function FinnalyPurchase() {
         <strong>Total</strong>
         <span>
           <strong>
-            {(valueOfCoffes + valueOfDelivery).toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL",
-            })}
+            {valueOfCoffes > 0 &&
+              (valueOfCoffes + valueOfDelivery).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
           </strong>
         </span>
       </div>

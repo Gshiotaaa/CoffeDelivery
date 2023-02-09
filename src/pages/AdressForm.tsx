@@ -2,7 +2,7 @@ import { MapPin } from "phosphor-react";
 
 export function AdressForm() {
   return (
-    <div className="flex flex-col p-10 bg-base-card rounded-lg  gap-8">
+    <div className="flex flex-col p-10 bg-base-card rounded-lg gap-8  ">
       <div className="flex gap-2">
         <MapPin size={32} color="#C47F17" weight="bold" />
         <div className="flex flex-col">
@@ -23,7 +23,7 @@ export function AdressForm() {
           placeholder="Rua João Daniel Martinelli"
           className="p-3 rounded-lg text-base-text bg-base-input placeholder:text-base-text"
         />
-        <div className="flex gap-3">
+        <div className="flex gap-3 max-sm:flex-col">
           <input
             type="number"
             placeholder="102"
@@ -35,7 +35,7 @@ export function AdressForm() {
             className="p-3 rounded-lg text-base-text bg-base-input placeholder:text-base-text flex-1"
           />
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-3 max-sm:flex-col">
           <input
             type="text"
             placeholder="Farrapos"

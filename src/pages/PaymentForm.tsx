@@ -2,7 +2,7 @@ import { Bank, CreditCard, CurrencyDollar, Money } from "phosphor-react";
 
 export function PaymentForm() {
   return (
-    <div className="flex flex-col p-10 bg-base-card rounded-lg gap-8 w-[640px]">
+    <div className="flex flex-col p-10 bg-base-card rounded-lg gap-8 w-[640px] max-lg:w-full ">
       <div className="flex gap-2">
         <CurrencyDollar size={32} color="#4B2995" weight="fill" />
         <div className="flex flex-col">
@@ -29,7 +29,7 @@ export function PaymentForm() {
         </button>
         <button
           type="button"
-          className="flex items-center  gap-3 p-4 bg-base-button flex-1 rounded-lg border focus:bg-purple-light focus:border-purple-dark"
+          className="flex items-center  gap-3 p-4 bg-base-button  rounded-lg border focus:bg-purple-light focus:border-purple-dark"
         >
           <Money size={16} color="#8047F8" weight="light" />
           DINHEIRO

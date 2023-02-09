@@ -40,7 +40,10 @@ export function CardCoffes({
       <div className="flex gap-3">
         {tags.map((tag) => {
           return (
-            <span className=" text-xs bg-yellow-light text-yellow-dark rounded-lg p-1">
+            <span
+              key={tag}
+              className=" text-xs bg-yellow-light text-yellow-dark rounded-lg p-1"
+            >
               {tag}
             </span>
           );
@@ -74,7 +77,7 @@ export function CardCoffes({
             </button>
           </div>
           <button
-            className="bg-purple-dark p-2 rounded-lg"
+            className="bg-purple-dark p-2 rounded-lg hover:bg-purple duration-300"
             onClick={() =>
               handleAddNewCoffeInShoppingCart({
                 id,
