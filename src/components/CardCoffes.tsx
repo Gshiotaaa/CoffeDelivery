@@ -1,6 +1,6 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { useContext, useState } from "react";
-import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { NewCoffe, ShoppingCartContext } from "../context/ShoppingCartContext";
 
 interface CardCoffesProps {
   id: string;
@@ -19,9 +19,20 @@ export function CardCoffes({
   price,
   photo,
 }: CardCoffesProps) {
-  const [countProdcts, setCountProducts] = useState(0);
+  const [countProdcts, setCountProducts] = useState(1);
 
   const { addNewCoffeInCart } = useContext(ShoppingCartContext);
+
+  function handleAddNewCoffeInShoppingCart({
+    id,
+    name,
+    price,
+    photo,
+    countProdcts,
+  }: NewCoffe) {
+    addNewCoffeInCart({ id, name, price, photo, countProdcts });
+    setCountProducts(1);
+  }
 
   return (
     <div className="flex flex-col items-center justify-center w-64 p-2 gap-5 bg-base-card rounded-tr-3xl rounded-bl-3xl">
@@ -64,7 +75,15 @@ export function CardCoffes({
           </div>
           <button
             className="bg-purple-dark p-2 rounded-lg"
-            onClick={() => addNewCoffeInCart(id, countProdcts)}
+            onClick={() =>
+              handleAddNewCoffeInShoppingCart({
+                id,
+                name,
+                price,
+                photo,
+                countProdcts,
+              })
+            }
           >
             <ShoppingCart size={20} color="white" weight="fill" />
           </button>
