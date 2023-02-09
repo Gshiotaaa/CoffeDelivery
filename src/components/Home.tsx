@@ -30,8 +30,8 @@ export function Home() {
   return (
     <div className="bg-background">
       <Header />
-      <div className="flex items-center justify-center gap-14 px-40 py-24 bg-backroundHome bg-no-repeat bg-cover w-full">
-        <div className="flex flex-col w-[588px] gap-16 ">
+      <div className="flex items-center justify-center gap-14 px-40 py-24 bg-backroundHome bg-no-repeat bg-cover w-full max-lg:flex-col max-sm:px-0">
+        <div className="flex flex-col w-[588px] gap-16 max-sm:w-4/5 max-sm:px-5">
           <div className="flex flex-col gap-4">
             <h1 className="text-5xl font-header ">
               Encontre o café perfeito para qualquer hora do dia
@@ -41,7 +41,7 @@ export function Home() {
               hora
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-5 max-sm:grid-cols-1 ">
             {advantages.map((advantage) => {
               return (
                 <AdvantagePoints
@@ -54,11 +54,13 @@ export function Home() {
             })}
           </div>
         </div>
-        <div>
+        <div className="max-sm:hidden">
           <img src={coffeImage} alt="" />
         </div>
       </div>
-      <h1 className="px-40 text-3xl font-header">Nossos cafés</h1>
+      <h1 className="px-40 text-3xl font-header max-sm:text-center max-sm:px-0">
+        Nossos cafés
+      </h1>
       <Coffes />
     </div>
   );

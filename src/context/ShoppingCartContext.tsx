@@ -2,6 +2,7 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ShoppingCartContextType {
   addNewCoffeInCart: (data: NewCoffe) => void;
+  setNewCoffe: React.Dispatch<React.SetStateAction<NewCoffe[]>>;
   newCoffe: NewCoffe[];
 }
 
@@ -52,7 +53,9 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
 
   return (
-    <ShoppingCartContext.Provider value={{ addNewCoffeInCart, newCoffe }}>
+    <ShoppingCartContext.Provider
+      value={{ addNewCoffeInCart, newCoffe, setNewCoffe }}
+    >
       {children}
     </ShoppingCartContext.Provider>
   );
