@@ -5,7 +5,7 @@ Timer for my tasks
 <h1  align="center">Coffe Delivery</h1>
 
 <div align="center">
-<img height="400px" src="https://user-images.githubusercontent.com/117778237/223860153-b8c08bd8-85bd-43eb-85e1-4e3dfb4913b1.PNG)" alt="Imagem da homepage do Coffe Delivery"/>
+<img height="400px" src="https://user-images.githubusercontent.com/117778237/223860751-a8d1ba3a-9354-44ef-bd65-9c941d9cd83b.PNG" alt="Imagem da homepage do Coffe Delivery"/>
 </div>
 
 
